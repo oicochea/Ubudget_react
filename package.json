@@ -29,6 +29,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "chart.js": "^2.9.4",
     "cross-env": "^7.0.2",
     "materialize-css": "^1.0.0-rc.2",
     "react": "^16.13.1",

@@ -2,10 +2,12 @@ import React from "react"
 import {useAppState} from "../AppState.jsx"
 import{Route, Link} from "react-router-dom"
 import Form from "../components/Form.jsx"
+import PieChart from "../components/PieChart.js"
 
 
 
 const Dashboard = (props) => {
+    
 
   const {state, dispatch } = useAppState()
   const {token , url ,expenses , username} = state
@@ -19,7 +21,6 @@ const Dashboard = (props) => {
   })
   const expenses = await response.json()
  dispatch({type: "getExpenseInfo", payload:expenses})
- console.log(expenses)
   }
 
   React.useEffect(() => {getExpenseInfo()}, [])
@@ -27,6 +28,7 @@ const Dashboard = (props) => {
   const loaded = () => {
     return <div className="dashboardHome"><h1>Dashboard</h1>
     <div className="dashboardTitle">{username}'s Spending</div>
+    <PieChart/>
         <Link to="/dashboard/new"><button>New Expense</button></Link>
         <Route path="/dashboard/:action" render={(rp) => <Form {...rp} getExpenseInfo={getExpenseInfo}/>}/>
         <div className="collectionExpenses">
