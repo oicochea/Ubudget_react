@@ -1,16 +1,15 @@
-header nav{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between
+i{
+   cursor: pointer;
 }
 
-header nav  a {
-  color: black;
-  text-decoration: none;
+
+.authForm{
+  margin: auto;
+  margin-top: 25%;
+  width: 300px;
+  height: fit-content;
 }
 
-header nav div{
-  font-size: larger;
-  background-color: cadetblue;
-  border-radius: 5px;
+nav li {
+  font-size: 24px;
 }

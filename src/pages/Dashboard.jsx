@@ -26,8 +26,8 @@ const Dashboard = (props) => {
   React.useEffect(() => {getExpenseInfo()}, [])
 
   const loaded = () => {
-    return <div className="dashboardHome"><h1>Dashboard</h1>
-    <div className="dashboardTitle">{username}'s Spending</div>
+    return <div>
+    <div className="dashboardTitle">{username}'s Lets Take a Look at Your Finances</div>
     <PieChart/>
         <Link to="/dashboard/new"><button>New Expense</button></Link>
         <Route path="/dashboard/:action" render={(rp) => <Form {...rp} getExpenseInfo={getExpenseInfo}/>}/>
@@ -35,18 +35,20 @@ const Dashboard = (props) => {
     {expenses.map(expense => (
             <div className="expenseEach" key={expense.id}>
                 <h4>{expense.category}</h4> 
-                    <button onClick={() => {
+                <span class="icon has-text-info">
+                <i class="fas fa-info-circle" onClick={() => {
                         dispatch({type: "select", payload: expense})
                         props.history.push("/dashboard/edit")
-                    }}>Edit</button>
-                    <button onClick={() => {
+                    }}>!</i>
+                    </span>
+                   <a class="delete is-medium" onClick={() => {
                         fetch(url + "/expenses/" + expense.id, {
                             method: "delete",
                             headers: {
                                 Authorization: "bearer " + token
                             }
                         }).then(() => getExpenseInfo());
-                    }}>Delete</button> 
+                    }}>Delete</a> 
              </div>
         ))}
     </div>

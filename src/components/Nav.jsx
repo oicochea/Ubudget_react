@@ -4,22 +4,23 @@ import {useAppState} from "../AppState.jsx"
 
 const Nav = (props) => {
   const { state, dispatch} = useAppState()
-  return <header>
-    <h1>Oscar BUdget App</h1>
-    <nav>
+  return  <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
+    <ul>
+      <li><div>Ubudget &nbsp;&nbsp;</div></li>
     {!state.token ? (
             <>
-            <Link to="/" className="topLinks"><div>Home</div></Link>
-            <Link to="/auth/signup" className="topLinks"><div>Signup</div></Link>
-            <Link to="/auth/login" className="topLinks"><div>Login</div></Link>
+            <li><Link to="/" className="topLinks"><div>Home</div></Link></li>
+            <li><Link to="/auth/signup" className="topLinks"><div>Signup</div></Link></li>
+            <li><Link to="/auth/login" className="topLinks"><div>Login</div></Link></li>
             </>
         ) : null}
-            {state.token ? <div onClick={() => {
+            <li><a>{state.token ? <div onClick={() => {
                 dispatch({type: "logout"})
                 props.history.push("/")
-            }}>Logout</div> : null}
-        </nav>
-  </header>
+            }}>Logout</div> : null}</a></li>
+    {/* <li class="is-active"><a href="#" aria-current="page"></a></li> */}
+  </ul>
+</nav>
 }
 
 export default Nav

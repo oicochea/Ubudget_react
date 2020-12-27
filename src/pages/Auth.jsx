@@ -55,14 +55,31 @@ React.useEffect(() => {
   }
 
     return (<div >
-      <div>
+      <div className="authForm">
       <form onSubmit={handleSubmit}>
-        <label>Username</label>
-          <input type="text" name="username" placeholder="Enter Username" value={formData.username} onChange={handleChange}/>
-          <label>Password</label>
-          <input type="password" name="password" placeholder="Enter Password" value={formData.password} onChange={handleChange}/>
-        <button type="submit" className="authFormButton"  value={type}>{type}</button>
+      <div class="field">
+      <label class="label">Username</label>
+      <div class="control has-icons-left">
+          <input class="input is-success" type="text" name="username" placeholder="Username" value={formData.username} onChange={handleChange}/>
+          <span class="icon is-small is-left">
+      <i class="fas fa-user"></i>
+    </span>
+          </div>
+          </div>
+          <div class="field">
+          <label class="label">Password</label>
+          <div class="control has-icons-left">
+          <input class="input is-success" type="password" name="password" placeholder="Enter Password" value={formData.password} onChange={handleChange}/>
+          <span class="icon is-small is-left">
+      <i class="fas fa-check"></i>
+    </span>
+          </div>
+          </div>
+          <div class="buttons">
+        <button class="button is-primary" type="submit"   value={type}>{type}</button>
+        </div>
         </form>
+  
         </div>
         </div>
     )
