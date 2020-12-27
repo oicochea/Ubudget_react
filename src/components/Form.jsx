@@ -10,7 +10,7 @@ const Form = (props) => {
 
   const actions  = {
     new: () => {
-      return fetch(state.url + "/cars/",{
+      return fetch(state.url + "/expenses/",{
         method: "post",
         headers:{
           "Content-Type" : "application/json",
@@ -20,7 +20,7 @@ const Form = (props) => {
       }).then((response)=> response.json());
     },
     edit: () => {
-      return fetch(state.url + "/cars/" + state.edit.id ,{
+      return fetch(state.url + "/expenses/" + state.edit.id ,{
         method: "put",
         headers:{
           "Content-Type" : "application/json",
@@ -45,20 +45,35 @@ const Form = (props) => {
 
   return (
       <div >
-          <form className="carForm" onSubmit={handleSubmit}>
-          <label for="make">Vehicle Make</label>
-                <input type ="text" name="make" value={formData.make} onChange={handleChange}></input>
-                <label for="model">Vehicle Model</label>
-                <input type ="text" name="model" value={formData.model} onChange={handleChange}></input>
-                <label for="year">Year</label>
-                <input type ="number" name="year" value={formData.year} onChange={handleChange}></input>
-                <label for="miles">Mileage</label>
-                <input type ="number" name="miles" value={formData.miles} onChange={handleChange}></input>
-                <label for="service">Services</label>
-                <input type ="text" name="services" value={formData.services} onChange={handleChange}></input>
-                <label for="image">Image</label>
-                <input type ="text" name="image" value={formData.image} onChange={handleChange}></input>
-                <button className="carFormButton"type="submit" value={action}>{action}</button>
+          <form className="expenseForm" onSubmit={handleSubmit}>
+          <label for="category">Category</label>
+                <select type ="text" name="category" value={formData.category} onChange={handleChange}>
+                <option value="food">Food</option>
+                <option value="rent">Rent</option>
+                <option value="utilities">Utilities</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="livingExpenses">Living Expenses</option>
+                </select>
+                <label for="ammount">Ammount</label>
+                <input type ="number" name="ammount" value={formData.ammount} onChange={handleChange}></input>
+                <label for="month">Month</label>
+                <select type ="number" name="month" value={formData.month} onChange={handleChange}>
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+                </select>
+                <label for="income">Monthly Income</label>
+                <input type ="number" name="income" value={formData.income} onChange={handleChange}></input>
+                <button type="submit" value={action}>{action}</button>
           </form>
       </div>
   )

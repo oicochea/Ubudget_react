@@ -61,7 +61,7 @@ React.useEffect(() => {
           <input type="text" name="username" placeholder="Enter Username" value={formData.username} onChange={handleChange}/>
           <label>Password</label>
           <input type="password" name="password" placeholder="Enter Password" value={formData.password} onChange={handleChange}/>
-        <button type="submit" classnName="authFormButton"  value={type}>{type}</button>
+        <button type="submit" className="authFormButton"  value={type}>{type}</button>
         </form>
         </div>
         </div>

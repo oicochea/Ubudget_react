@@ -27,7 +27,7 @@ const Dashboard = (props) => {
   const loaded = () => {
     return <div className="dashboardHome"><h1>Dashboard</h1>
     <div className="dashboardTitle">{username}'s Spending</div>
-        <Link to="/dashboard/new"><button>Add an Expense</button></Link>
+        <Link to="/dashboard/new"><button>New Expense</button></Link>
         <Route path="/dashboard/:action" render={(rp) => <Form {...rp} getExpenseInfo={getExpenseInfo}/>}/>
         <div className="collectionExpenses">
     {expenses.map(expense => (
