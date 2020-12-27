@@ -54,13 +54,12 @@ React.useEffect(() => {
     })
   }
 
-    return (<div className="authMain">
-      <h1>HOME</h1>
-      <div className="authFormContent">
-      <form className="authForm"onSubmit={handleSubmit}>
-        <label for="Username">Username</label>
+    return (<div >
+      <div>
+      <form onSubmit={handleSubmit}>
+        <label>Username</label>
           <input type="text" name="username" placeholder="Enter Username" value={formData.username} onChange={handleChange}/>
-          <label for="Password1">Password</label>
+          <label>Password</label>
           <input type="password" name="password" placeholder="Enter Password" value={formData.password} onChange={handleChange}/>
         <button type="submit" classnName="authFormButton"  value={type}>{type}</button>
         </form>

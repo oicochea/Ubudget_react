@@ -21,7 +21,6 @@ export const App = (props) => {
   // }, [])
 
   return <>
-  <h1>Hello WOrld</h1>
   <Route path = "/" component={Nav}/>
   <Switch>
     <Route exact path = "/" component={Home}/>

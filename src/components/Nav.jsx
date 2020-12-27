@@ -5,6 +5,7 @@ import {useAppState} from "../AppState.jsx"
 const Nav = (props) => {
   const { state, dispatch} = useAppState()
   return <header>
+    <h1>Oscar BUdget App</h1>
     <nav>
     {!state.token ? (
             <>
