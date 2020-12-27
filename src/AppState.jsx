@@ -6,7 +6,7 @@ import React, { useContext, useReducer } from "react"
 ///////
 
 const initialState = {
-    url : "http://ubudget-api.herokuapp.com",
+    url : "https://ubudget-api.herokuapp.com",
     token: null,
     username:null,
     expenses: null,
@@ -18,7 +18,7 @@ const initialState = {
     },
     edit:{
         id:0,
-         category:"",
+        category:"",
         ammount:0,
         month: 0 ,
         income: 0

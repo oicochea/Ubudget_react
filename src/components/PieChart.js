@@ -12,10 +12,11 @@ const PieChart = (props) =>{
             labels: [],
             datasets:[
                 {
-                    label: 'Category',
-                    data:[]
+                    label: 'rent',
+                    data:[],
+                    
                 },
-            ]
+            ],
         }
         data.forEach(
             (expense) => {
@@ -32,7 +33,7 @@ const createChart = (data) => {
     const expensesChart = new Chart(ctx, {
         type: 'pie',
         data: data,
-        options: options
+        
     })
 }
 const getExpenses = async () => {
@@ -46,7 +47,7 @@ const getExpenses = async () => {
     console.log(data)
     const chartData = await prepareData(data)
     console.log(chartData)
-    createChart(data)
+    createChart(chartData)
 }
 React.useEffect(() => {
     getExpenses()

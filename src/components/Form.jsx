@@ -38,7 +38,7 @@ const Form = (props) => {
   const handleSubmit =(event)=>{
     event.preventDefault()
     actions[action]().then((data)=>{
-      props.getCarInfo()
+      props.getExpenseInfo()
       props.history.push("/dashboard/")
     })
   }
@@ -47,7 +47,7 @@ const Form = (props) => {
       <div >
           <form className="expenseForm" onSubmit={handleSubmit}>
           <label for="category">Category</label>
-                <select type ="text" name="category" value={formData.category} onChange={handleChange}>
+          <select type ="text" name="category" value={formData.category} onChange={handleChange}>
                 <option value="food">Food</option>
                 <option value="rent">Rent</option>
                 <option value="utilities">Utilities</option>
