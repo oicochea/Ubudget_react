@@ -55,6 +55,7 @@ React.useEffect(() => {
   }
 
     return (<div >
+      <div class="box">
       <div className="authForm">
       <form onSubmit={handleSubmit}>
       <div class="field">
@@ -75,11 +76,12 @@ React.useEffect(() => {
     </span>
           </div>
           </div>
-          <div class="buttons">
+          <div class="buttonsContainer">
         <button class="button is-primary" type="submit"   value={type}>{type}</button>
         </div>
         </form>
   
+        </div>
         </div>
         </div>
     )

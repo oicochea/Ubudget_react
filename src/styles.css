@@ -5,11 +5,160 @@ i{
 
 .authForm{
   margin: auto;
-  margin-top: 25%;
+  margin-top: 10%;
   width: 300px;
   height: fit-content;
+  text-align: center;
 }
 
+.expenseForm{
+  margin: auto;
+  margin-top: 10%;
+  width: 300px;
+  height: fit-content;
+  text-align: center;
+}
+
+nav{
+  display: flex;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  background-color:   #00303f;
+  ;
+  color: white;
+}
 nav li {
+  text-decoration: none;
+  color: white;
   font-size: 24px;
 }
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+}
+
+.title{
+  color:white;
+  float: left;
+  margin-right: auto;
+  margin-left: 10px;
+}
+.copyright{
+  color: black;
+  font-family: 'Lato';
+  font-style: italic;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+}
+.welcome{
+  color: black;
+  font-family: 'Lato';
+  font-weight: 800;
+  font-size: 38px;
+  text-align: center;
+  margin: auto;
+}
+
+.dashboardTitle{
+  color: black;
+  font-family: 'Lato';
+  font-weight: 800;
+  font-size: 38px;
+  text-align: center;
+  margin: auto;
+
+}
+
+.about{color: black;
+  font-family: 'Lato';
+  font-size: 20px;
+  width: 30%;
+margin-left: 5%;
+  text-align: left;
+}
+
+body{
+  background-color: white;
+
+}
+
+.aboutContainer{
+  margin-top: 10%;
+  display: flex;
+  height: 900px;
+  background-image: url(https://i.imgur.com/lhL8ONH.jpg);
+
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  margin-right: 10%;
+  
+}
+
+.expenseEach{
+  padding: 3px;
+  border:  1x dotted black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.collectionExpenses{
+  border:  3px solid cadetblue;
+  width: 70%;
+  height: min-content;
+  margin: auto;
+
+}
+
+#addExpense{
+  margin: auto;
+  text-align: center;
+}
+.newExpenseContainer{
+  margin-top: 10px;
+  text-align: center;
+}
+
+.expensesHeader{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: black;
+  font-family: 'Lato';
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+}
+
+.buttonsContainer{
+  margin: auto;
+}
+
+.formButtonsContainer{
+ 
+  margin: auto;
+  margin-top: 10px;
+
+}
+
+.box{
+  margin: auto;
+  height: fit-content;
+  width: fit-content;
+  padding: 10px;
+}
+
+
+.chartContainer{
+  width: 80%;
+  text-align: center;
+  margin:auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border:  3px solid black;
+  background-color: cadetblue;
+}
+

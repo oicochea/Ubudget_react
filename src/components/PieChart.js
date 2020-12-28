@@ -12,9 +12,11 @@ const PieChart = (props) =>{
             labels: [],
             datasets:[
                 {
-                    label: 'rent',
+                    label: "",
                     data:[],
-                    
+                    backgroundColor: "rgba(54,162,235,0.6)",
+              borderWidth: 1,
+              borderColor: "#777"
                 },
             ],
         }
@@ -45,6 +47,8 @@ const getExpenses = async () => {
       })
     const data = await response.json()
     console.log(data)
+    const income = data[data.length-1].income
+    console.log(data[data.length-1].income)
     const chartData = await prepareData(data)
     console.log(chartData)
     createChart(chartData)
@@ -56,7 +60,6 @@ React.useEffect(() => {
     React.useEffect(()=> {getExpenses()}, [])
         return (
           <>
-            <h1>Expenses</h1>
             <canvas id="expenses" width="300" height="100"></canvas>
           </>
         )

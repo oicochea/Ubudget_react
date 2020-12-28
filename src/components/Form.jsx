@@ -45,19 +45,20 @@ const Form = (props) => {
 
   return (
       <div >
+        <div class="box">
           <form className="expenseForm" onSubmit={handleSubmit}>
           <label for="category">Category</label>
-          <select type ="text" name="category" value={formData.category} onChange={handleChange}>
+          <select type="text"class="input is-info" name="category" value={formData.category} onChange={handleChange}>
                 <option value="food">Food</option>
                 <option value="rent">Rent</option>
                 <option value="utilities">Utilities</option>
                 <option value="entertainment">Entertainment</option>
                 <option value="livingExpenses">Living Expenses</option>
                 </select>
-                <label for="ammount">Ammount</label>
-                <input type ="number" name="ammount" value={formData.ammount} onChange={handleChange}></input>
+                <label for="ammount">Amount</label>
+                <input class="input is-info"  type ="number" name="ammount" value={formData.ammount} onChange={handleChange}></input>
                 <label for="month">Month</label>
-                <select type ="number" name="month" value={formData.month} onChange={handleChange}>
+                <select class="input is-info"  type ="number" name="month" value={formData.month} onChange={handleChange}>
                 <option value="1">January</option>
                 <option value="2">February</option>
                 <option value="3">March</option>
@@ -72,9 +73,12 @@ const Form = (props) => {
                 <option value="12">December</option>
                 </select>
                 <label for="income">Monthly Income</label>
-                <input type ="number" name="income" value={formData.income} onChange={handleChange}></input>
-                <button type="submit" value={action}>{action}</button>
+                <input class="input is-info" type="number" name="income" value={formData.income} onChange={handleChange}></input>
+                <div class="formButtonsContainer">
+  <button class="button is-success" type="submit" value={action}>{action}</button>
+  </div>
           </form>
+      </div>
       </div>
   )
 }
