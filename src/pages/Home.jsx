@@ -9,7 +9,7 @@ const Home = (props) => {
     <br/>
     <br/>
     <br/>
-    Add your expense and throw away the reciept!
+    Add your expense and throw away the receipt!
     </div>
   </div>
         <div className="copyright">Copyright © 2020 created by Oscar Icochea Calenzani. All rights reserved.</div>
